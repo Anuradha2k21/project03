@@ -31,4 +31,7 @@ public class LecturerService {
     public void deleteLecturerById(int id){
         lecRepo.deleteById(id);
     }
+    public List<Lecturer> findLecturerByName(String name){
+        return lecRepo.findLecturerByName(name);
+    }
 }

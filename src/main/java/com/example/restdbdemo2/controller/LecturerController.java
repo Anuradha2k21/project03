@@ -31,4 +31,8 @@ public class LecturerController {
     public void deleteLecturerById(@PathVariable int id){
         lec_service.deleteLecturerById(id);
     }
+    @GetMapping(path = "/lecturers", params="name")
+    public List<Lecturer> findStudentByName(@RequestParam String name){
+        return lec_service.findLecturerByName(name);
+    }
 }
