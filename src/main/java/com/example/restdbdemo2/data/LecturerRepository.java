@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface LecturerRepository extends JpaRepository<Lecturer,Integer> {
-    @Query("select lec from Lecturer lec where name=?1")
+    @Query("select lec from Lecturer lec where name=?1")    //  ?1  is to indicate first parameter value
     public List<Lecturer> findLecturerByName(String name);
 }
